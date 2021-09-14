@@ -1,0 +1,81 @@
+<div style="background: rgb(99, 9, 134);">
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <button onclick="goBack()" style="background: none; border: none;color: white;">
+                        <i class="fa fa-long-arrow-left" style="margin-top: 10px; font-size: 40px;"></i>
+                    </button>
+                    <h4>Check Out</h4>
+                    <h6>Insert Location and your Info</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="border-style">
+        <div class="container">
+            <form #user="ngForm" (ngSubmit)="onSubmit(user.value)">
+                <div class="row">
+                    <div class="row">
+                        <div class="box-style1 col-xs-12">
+                            <div class="row" style="font-size: 18px;">
+                                <div class="col">
+                                    <label><input type="radio" name="delivery_type" value="rad1" ngModel>Table
+                                        delivery</label>
+                                </div>
+                                <div class="col" style="text-align: right;">
+                                    <label><input type="radio" name="delivery_type"
+                                            val="rad2" ngModel>Collection</label>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: 20px;">
+                                <div class="col">
+                                    <h5 style="color: black;margin-top: 10px;">Select Location</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col">
+                                            <input class="input-style" type="text"
+                                                placeholder="Insert Table Number" name="tablenum" ngModel><br>
+                                        </div>
+                                    </div>
+                                    <input class="input-style" type="text" placeholder="Insert any extra notes"
+                                        style="margin-top: 10px;"><br>
+                                    <h5 style="color: black;margin-top: 30px;">Your Information</h5>
+                                    <input class="input-style" type="text" placeholder="Name" name="username" ngModel><br>
+                                    <input class="input-style" type="email" name="email" ngModel
+                                        placeholder="Email(We will email your receipt and lint to order page)"
+                                        style="margin-top: 10px; font-size: 50%;"><br>
+                                    <select class="input-style" style="width: 28%; margin-top: 10px; color: gray;">
+                                        <option>+91</option>
+                                    </select>
+                                    <input class="input-style" type="number" placeholder="Phone Number(Optional)"
+                                        style="width: 70%; margin-left: 2%;">
+                                    
+                                    <label style="font-size: small; margin-top: 20px;">
+                                        <input type="checkbox"> You agree to our <span style="color: rgb(255, 130, 151);"> Terms and Condition</span> and <span style="color: rgb(255, 122, 144);">Privacy Policy</span>
+                                    </label>
+                                    <br>
+                                    <label style="font-size: small; margin-top: 10px;">
+                                        <input type="checkbox"> I do not want to receive updates about promotions, discounts, special offers and events from {{items[0].vendorName}}
+                                    </label>
+                                    <br><br>
+                                    <div class="row">
+                                        <div class="col">
+                                            <button type="submit" class="button1" style="font-size:100%">
+                                                Proceed to Pay
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,173 @@
+<div style="background: rgb(99, 9, 134);">
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <button onclick="location.href='/vendor'" style="background: none; border: none;color: white;">
+                        <i class="fa fa-long-arrow-left" style="margin-top: 10px; font-size: 40px;"></i> Go back to Vendors
+                    </button>
+                    <h4>Check Out</h4>
+                    <h6>Check the status below</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class ="border-style">
+        <div class="container">
+            <div class="row" id="popular">
+                <div class="row" >         
+                    <div class ="box-style1 col-xs-12">
+                        <div class="row">
+                            <div class="col" style="text-align: center;">
+                                <span>ORDER #67845</span>
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col" style="text-align: center; font-size: 15px;color: rgb(255, 130, 151);">
+                                <span>We have sent you a link to your email to come back to this page</span>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div *ngFor="let item of items">
+                    <div class ="box-style1 col-xs-12">
+                        <div class="row">
+                            <div class="col" style="text-align: left; font-size: 20px;">
+                                <span>{{item.vendorName}}</span>
+                            </div> 
+                        </div>
+                    </div>
+                   
+                    <div class="row" >         
+                        <div class="box-style2 col-xs-12" style="margin-top: 0px;">
+                            <div class="row">
+                                <div class="col" style="font-size: 20px; color: green;margin-top: 3px;">
+                                    <span>Accepted</span>
+                                </div> 
+                                <div class="col" style="margin-top: 10px;">
+                                    <span>You are</span>
+                                </div> 
+                                <div class="col">
+                                    <span style="font-size: 30px;"><strong>25</strong></span>
+                                </div> 
+                                <div class="col">
+                                    <span>at the queue</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" >         
+                    <div class ="box-style1 col-xs-12">
+                        <div class="row">
+                            <div class="col" style="text-align: center;">
+                                <hr style="color: rgb(105, 105, 105);">
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: -40px;">         
+                    <div class ="box-style1 col-xs-12">
+                        <div class="row" style="font-size: 20px;">
+                            <div class="col">
+                                Date
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col" style="font-size: 15px;color: gray; margin-left: 25px;">
+                                {{date}}
+                            </div> 
+                        </div>
+                        <div class="row" style="font-size: 20px;">
+                            <div class="col" style="margin-top: 15px;">
+                                Order type
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col" style="font-size: 15px;color: gray; margin-left: 25px;">
+                                <span>{{delType}}</span> - <span> {{point}} </span><span> {{val}} </span>
+                            </div> 
+                        </div>
+
+                        <div class="row" style="font-size: 20px;">
+                            <div class="col" style="margin-top: 15px;">
+                                Summary order
+                            </div> 
+                        </div>
+                        
+                        <div *ngFor="let item of items">
+                            <div class="row">
+                                <div class="col" style="font-size: 15px;color: gray; margin-left: 25px;">
+                                    <span>{{item.qnt}}</span> x <span>{{item.name}}</span>
+                                </div> 
+                                <div class="col" style="font-size: 15px;color: rgb(253, 181, 193); text-align: right;">
+                                    £ {{mul(item)}}
+                                </div> 
+                            </div>    
+                        </div>
+                        <div class="row" style="margin-top: 10px;">
+                            <div class="col" style="font-size: 15px;color: gray; margin-left: 25px;">
+                                <span>Service Charge(12.5%)</span>
+                            </div> 
+                            <div class="col" style="font-size: 15px;color: rgb(253, 181, 193); text-align: right;">
+                                £ 10
+                            </div> 
+                        </div>  
+                        <div class="row" style="margin-top: 10px;">
+                            <div class="col" style="font-size: 15px;color: gray; margin-left: 25px;">
+                                <span>Tip</span>
+                            </div> 
+                            <div class="col" style="font-size: 15px;color: rgb(253, 181, 193); text-align: right;">
+                                £ 5
+                            </div> 
+                        </div> 
+                        <div class="row" style="margin-top: 10px;">
+                            <div class="col" style="color:gray;">
+                                <hr>
+                            </div>  
+                        </div>
+                        <div class="row">
+                            <div class="col" style="font-size: 17px;color: black; margin-left: 25px;">
+                                <span>TOTAL</span>
+                            </div> 
+                            <div class="col" style="font-size: 15px;color: rgb(255, 116, 139); text-align: right;">
+                                £ {{totlAmnt}}
+                            </div> 
+                        </div> 
+                        <div class="row" style="font-size: 20px;">
+                            <div class="col" style="margin-top: 15px;">
+                                Paid by
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col" style="font-size: 15px;color: gray; margin-left: 25px;">
+                                <span>CARD(Visa - 0987 - Apple Pay)</span>
+                            </div> 
+                        </div>
+                        <div class="row" style="font-size: 20px;">
+                            <div class="col" style="margin-top: 15px;">
+                                Your Details
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col" style="font-size: 15px;color: gray; margin-left: 25px;">
+                                <span>test</span>
+                            </div> 
+                        </div>
+                        <div class="row" style="font-size: 20px;">
+                            <div class="col" style="margin-top: 15px;">
+                                Vendor Details
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col" style="font-size: 15px;color: gray; margin-left: 25px;">
+                                <span>Address</span>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

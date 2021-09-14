@@ -1,0 +1,122 @@
+<div style="background: rgb(99, 9, 134);">
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <button onclick="goBack()" style="background: none; border: none;color: white;">
+                        <i class="fa fa-long-arrow-left" style="margin-top: 10px; font-size: 40px;"></i>
+                    </button>
+                    <h4>My Basket</h4>
+                    <h6>Review your order</h6>
+                </div>
+                <div class="col" style="text-align: right;">
+                    <h6>
+                        <button class="btn btn-primary" style="background: none; border: none;" (click)="removeAll()">
+                            <i class="fa fa-trash" style="font-size: 25px;"></i>
+                        </button>
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class ="border-style">
+        <div class="container">
+            <div class="row" >
+                <div class="row" *ngIf="items?.length">         
+                    <div class ="box-style1 col-xs-12">
+                        <div class="row">
+                            <div class="col">
+                                <span>{{items[0].vendorName}}</span>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="row" *ngFor="let item of items">         
+                    <div class="box-style col-xs-12" style="margin-top: 10px;">
+                        <div class="row">
+                            <div class="col">
+                                <span>{{item.name}}</span>
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <span style="color: rgb(250, 144, 162);">Details</span>
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <span style="color: gray;">£ {{item.totPrice}}</span>
+                            </div> 
+                            <div class="col" style="text-align: right;">
+                                <button style="background: rgb(197, 197, 197); border-radius: 50px;border: none;" (click)="dec(item)"><img src="{{item.img1}}"></button>
+                                <span style="padding-left: 5px;padding-right: 5px;">{{item.qnt}}</span>
+                                <button style="border: none;border-radius: 50px; background: rgb(255, 84, 112);" (click)="inc(item)"><img src="{{item.img2}}"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" >         
+                    <div class="box-style col-xs-12" style="margin-top: 50px;">
+                        <div class="row">
+                            <div class="col">
+                                <span style="color: gray;">Add tip</span>
+                            </div> 
+                            <div class="col" style="text-align: right;">
+                                <span style="color: gray;">
+                                    <input type="text" placeholder="%" style="border-radius: 10px 10px 10px 10px; width: 8vmin; text-align: center;">
+                                    <span style="margin-left: 10px; margin-right: 10px;">or</span>
+                                    <input type="text" placeholder="£" style="border-radius: 10px 10px 10px 10px; width: 8vmin; text-align: center;">
+                                </span>
+                            </div> 
+                        </div>
+                    </div>
+
+                    <div class="row" >         
+                        <div class ="box-style2 col-xs-12">
+                            <div class="row">
+                                <div class="col">
+                                    <span>Item Total({{totalqnt}})</span>
+                                </div>
+                                <div class="col" style="text-align: right;">
+                                    <span>£ {{totalItemAmt}}</span>
+                                </div>  
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <span>Service Charge(12.5%)</span>
+                                </div>
+                                <div class="col" style="text-align: right;">
+                                    <span>£ 10</span>
+                                </div>  
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <span>Tip</span>
+                                </div>
+                                <div class="col" style="text-align: right;">
+                                    <span>£ 5</span>
+                                </div>  
+                            </div>
+                            <hr>
+                            <div class="row" style="margin-top: -10px;color: rgb(124, 124, 124);">
+                                <div class="col">
+                                    <span>Total Amount</span>
+                                </div>
+                                <div class="col" style="text-align: right;">
+                                    <span>£ {{grandTotal}}</span>
+                                </div>  
+                            </div>
+                            <br><br>
+                            <div class="row">
+                                <div class="col">
+                                    <button class="button1" style="font-size:25px" onclick="location.href='/checkout'">
+                                        Check Out
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

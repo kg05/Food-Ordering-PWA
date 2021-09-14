@@ -1,0 +1,175 @@
+<div style="background: rgb(99, 9, 134);">
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h4>Da Mario's<br>Menu</h4>
+                </div>
+                <div class="col" style="text-align: right;">
+                    <h6>Go Basket
+                        <button class="btn btn-primary" style="background: none; border: none;"onclick="location.href='/cart'">
+                            <i style="font-size: 30px;" class="fa fa-shopping-cart"></i>
+                            <div class="badge bg-danger carticon">{{cartCnt}}</div>
+                        </button>
+                    </h6>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-xs-12">      
+                    <div class="btn-group">
+                        <button style="margin-left: 0px;" onclick="location.href='popular'">Popular</button>
+                        <button onclick="location.href='#salad'">Salad</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class ="border-style">
+        <div class="container">
+            <div class="row" id="popular">
+                <div class="row" >         
+                    <div class ="box-style1 col-xs-12">
+                        <div class="row">
+                            <div class="col">
+                                <span>Most Popular</span>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="row" >         
+                    <div class="box-style col-xs-12" onclick="location.href='/item'" style="margin-top: 0px;">
+                        <div class="row">
+                            <div class="col">
+                                <span>Vegetable Mix With Rice</span>
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <span style="color: grey;">Vegetarian</span>
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <span style="color: rgb(250, 144, 162);">From £ 27:00</span>
+                            </div> 
+                            <div class="col" style="text-align: right;">
+                                <span style="color: rgb(139, 9, 139);">In basket <span class="badge carticon" style="font-size: 12px;background: rgb(139, 9, 139);">{{vegCnt}}</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" >         
+                    <div class="box-style col-xs-12" onclick="location.href='/item1'">
+                        <div class="row">
+                            <div class="col">
+                                <span>Lenca Sauce Teriaky</span>
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <span style="color: grey;">Gluten free</span>
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <span style="color: rgb(250, 144, 162);">From £ 32:10</span>
+                            </div>
+                            <div class="col" style="text-align: right;">
+                                <span style="color: rgb(139, 9, 139);">In basket <span class="badge carticon" style="font-size: 12px;background: rgb(139, 9, 139);">{{sauceCnt}}</span></span>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="row" >         
+                    <div class="box-style col-xs-12" onclick="location.href='/menu'">
+                        <div class="row">
+                            <div class="col">
+                                <span>Salmon Grill With Salad</span>
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <span style="color: grey;">Seafood</span>
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <span style="color: rgb(250, 144, 162);">From £ 54:00</span>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="salad">
+                <div class="row" >         
+                    <div class ="box-style1 col-xs-12">
+                        <div class="row">
+                            <div class="col">
+                                <span>Salad</span>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="row" >         
+                    <div class="box-style col-xs-12" onclick="location.href='/menu'" style="margin-top: 0px;">
+                        <div class="row">
+                            <div class="col">
+                                <span>Greek Salad</span>
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <span style="color: grey;">Salad,Dairy,Nuts</span>
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <span style="color: rgb(250, 144, 162);">From £ 5:00</span>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="row" >         
+                    <div class="box-style col-xs-12" onclick="location.href='/menu'">
+                        <div class="row">
+                            <div class="col">
+                                <span>Italian Salad</span>
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <span style="color: grey;">Salad</span>
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <span style="color: rgb(250, 144, 162);">From £ 12:10</span>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="row" >         
+                    <div class="box-style col-xs-12" onclick="location.href='/menu'">
+                        <div class="row">
+                            <div class="col">
+                                <span>Salmon Grill With Salad</span>
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <span style="color: grey;">Seafood</span>
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <span style="color: rgb(250, 144, 162);">From £ 54:00</span>
+                            </div> 
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div> 
+    </div>
+</div>
+

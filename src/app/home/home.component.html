@@ -1,0 +1,39 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3>Select Area</h3>
+            </div>
+            <div class="col" style="text-align: right;">
+                <h6>Go Basket
+                    <button class="btn btn-primary" style="background: none; border: none;" onclick="location.href='/cart'">
+                        <i style="font-size: 30px;" class="fa fa-shopping-cart"></i>
+                        <div class="badge bg-danger carticon">{{cartCnt}}</div>
+                    </button>
+                </h6>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <p style="text-align: center; margin-top: 20px;" >Please select the area where you are<p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="box-style col-xs-12" onclick="location.href='/vendor'">
+            The Village
+        </div>
+    </div>
+    <div class="row">
+        <div class="box-style col-xs-12" onclick="location.href='#'">
+            The Arena
+        </div>
+    </div>
+    <div class="row">
+        <div class="box-style col-xs-12" onclick="location.href='#'">
+            Beach
+        </div>
+    </div>
+</div>
